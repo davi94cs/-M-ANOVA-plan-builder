@@ -49,22 +49,18 @@ for all combinations of:
 
 Let:
 
-- \( N \) = number of samples  
-- \( c \) = constant  
-- \( \alpha \) = scalability exponent  
-- \( T(N) \) = execution time for input size \( N \)
+- N  = number of samples  
+- c  = constant  
+- α = scalability exponent  
+- T(N) = execution time for input size \( N \)
 
 We assume a power-law scaling:
 
-\[
-T(N) = c \cdot N^{\alpha}
-\]
+T(N) = cN^α
 
-Given two observations \((T_1, N_1)\) and \((T_2, N_2)\):
+Given two observations (T_1, N_1) and (T_2, N_2):
 
-\[
-\alpha = \frac{\log(T_2 / T_1)}{\log(N_2 / N_1)}
-\]
+α = (log(T_2 / T_1)) / (log(N_2 / N_1))
 
 ---
 
@@ -72,14 +68,12 @@ Given two observations \((T_1, N_1)\) and \((T_2, N_2)\):
 
 In practice, α is estimated using **two empirical measurements**:
 
-- \( (T_{80}, N_{80}) \): runtime with an 80/20 split
-- \( (T_{70}, N_{70}) \): runtime with a 70/30 split
+- (T_80, N_80): runtime with an 80/20 split
+- (T_70, N_70): runtime with a 70/30 split
 
 Since dataset size scales with training fraction:
 
-\[
-\alpha = \frac{\log(T_{80} / T_{70})}{\log(0.8 / 0.7)}
-\]
+α = (log(T_80 / T_70)) / (log(0.8 / 0.7))
 
 The exponent is:
 - estimated per `(fs_method, classifier)` pair when possible
@@ -95,9 +89,7 @@ Once α is known, execution times are extrapolated from the base dataset
 
 For example, estimating runtime on 24k samples:
 
-\[
-T(24k) = T(3k) \cdot 8^{\alpha}
-\]
+T(24k) = T(3k)8^α
 
 The final `time_table.tsv` contains execution-time estimates for:
 
