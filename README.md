@@ -136,9 +136,9 @@ family_map = {
 
 ### 1. Decision variables
 
-- **Binary decision variable** \( X_m \):
-  - \( X_m = 1 \) if model *m* is selected
-  - \( X_m = 0 \) otherwise
+- **Binary decision variable** X_m :
+  - X_m = 1 if model *m* is selected
+  - X_m = 0 otherwise
 
 ---
 
