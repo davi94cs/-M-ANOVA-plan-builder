@@ -358,4 +358,5 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 if __name__ == "__main__":
     raise SystemExit(main())
 
-# python3 STATISTIC_TEST/build_time_table.py --input merged.tsv --sep $'\t' --output STATISTIC_TEST/time_table.tsv --output-sep $'\t' --target-sizes 500,3000,24000 --base-size 3000 --filter-sample-distribution 80_20 --drop-sample-distribution --log-level INFO
+# python3 build_time_table.py --input input/merged.tsv --sep $'\t' --output output/time_table.tsv --output-sep $'\t' --target-sizes 500,3000,24000 --base-size 3000 --filter-sample-distribution 80_20 --drop-sample-distribution --log-level INFO
+
