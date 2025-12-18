@@ -378,4 +378,5 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 if __name__ == "__main__":
     raise SystemExit(main())
 
-# python3 STATISTIC_TEST/build_anova_plan.py -i STATISTIC_TEST/time_table.tsv --sep $'\t' -o STATISTIC_TEST/rep_3/anova_plan_100h.tsv --output-sep $'\t' --max-hours 100 --n-dist 3 --cost-dataset-size 24000 --exclude-fs SKB --exclude-classifiers ADA,QDA --use-default-family-map --replicate-rows --log-file STATISTIC_TEST/rep_3/log_100h.txt
+# python3 build_anova_plan.py -i input/time_table.tsv --sep $'\t' -o output/100h/anova_plan_100h.tsv --output-sep $'\t' --max-hours 100 --n-dist 3 --cost-dataset-size 24000 --exclude-fs SKB --exclude-classifiers ADA,QDA --use-default-family-map --replicate-rows --log-file output/100h/log_100h.txt
+
